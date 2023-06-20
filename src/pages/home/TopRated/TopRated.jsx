@@ -24,7 +24,7 @@ export default function TopRated() {
           onTabsChange={onTabsChange}
         />
       </div>
-      <Carousel datas={data?.results} isLoading={isLoading} />
+      <Carousel datas={data?.results} isLoading={isLoading} endPoint={endPoint} />
     </div>
   );
 }

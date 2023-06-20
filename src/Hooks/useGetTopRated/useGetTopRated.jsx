@@ -3,7 +3,7 @@ import api from "../../utils/api";
 
 export default function useGetTopRated(endPoint) {
   return useQuery({
-    queryKey: [endPoint],
+    queryKey: ["TopRated", endPoint],
     queryFn: async () => {
       const responseMedia = api.getTopRatedMedia(endPoint);
       return responseMedia;

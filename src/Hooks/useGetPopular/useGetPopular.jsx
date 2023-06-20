@@ -3,7 +3,7 @@ import api from "../../utils/api";
 
 export default function useGetPopular(endPoint) {
   return useQuery({
-    queryKey: [endPoint],
+    queryKey: ["Popular", endPoint],
     queryFn: async () => {
       const responseMedia = api.getPopularMedia(endPoint);
       return responseMedia;

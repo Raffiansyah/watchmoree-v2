@@ -19,6 +19,7 @@ export default function ItemGrid({ datas, mediaType }) {
             />
             {data.vote_average && (
               <CircleRating
+                textColor={"black"}
                 rating={data.vote_average.toFixed(1)}
                 customClass={
                   'md:w-[55px] w-[45px] bg-white rounded-full p-1 absolute -bottom-2 left-2 font-bold'

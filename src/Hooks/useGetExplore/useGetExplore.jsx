@@ -3,7 +3,7 @@ import api from '../../utils/api';
 
 export default function useGetExplore(mediaType) {
   return useInfiniteQuery({
-    queryKey: [mediaType],
+    queryKey: ["Explore", mediaType],
     queryFn: async ({ pageParam = 1 }) => {
       const data = api.getDiscoverMedia(mediaType, pageParam);
       return data;

@@ -1,11 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
 import api from '../../utils/api';
 
-export default function useGetDetail(mediaType, id) {
+export default function useGetSimilar(mediaType, id) {
   return useQuery({
-    queryKey: ["Detail", mediaType, id],
+    queryKey: ["Similar", mediaType, id],
     queryFn: async () => {
-      const data = api.getDetailMedia(mediaType, id);
+      const data = api.getSimilarMedia(mediaType, id);
       return data;
     },
   });

@@ -3,7 +3,7 @@ import api from '../../utils/api';
 
 export default function useGetSearch(query) {
   return useInfiniteQuery({
-    queryKey: [query],
+    queryKey: ["Search", query],
     queryFn: async ({ pageParam = 1 }) => {
       const data = api.getSearchMedia(query, pageParam);
       return data;
