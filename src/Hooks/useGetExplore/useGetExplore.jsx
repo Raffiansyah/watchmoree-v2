@@ -1,11 +1,11 @@
 import { useInfiniteQuery } from '@tanstack/react-query';
 import api from '../../utils/api';
 
-export default function useGetExplore(mediaType) {
+export default function useGetExplore(mediaType, genresId, sort) {
   return useInfiniteQuery({
-    queryKey: ["Explore", mediaType],
+    queryKey: ["Explore", mediaType, genresId, sort],
     queryFn: async ({ pageParam = 1 }) => {
-      const data = api.getDiscoverMedia(mediaType, pageParam);
+      const data = api.getDiscoverMedia(mediaType, pageParam, genresId, sort);
       return data;
     },
     getNextPageParam: (lastPage) => {

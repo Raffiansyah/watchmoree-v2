@@ -43,9 +43,9 @@ const api = (() => {
     return request;
   }
 
-  async function getDiscoverMedia(mediaType, pageNum) {
+  async function getDiscoverMedia(mediaType, pageNum, genresId, sort) {
     const request = await fetchWithAuth(
-      `/discover/${mediaType}?page=${pageNum}`
+      `/discover/${mediaType}?page=${pageNum}&with_genres=${genresId}&sort_by=${sort}`
     );
     return request;
   }

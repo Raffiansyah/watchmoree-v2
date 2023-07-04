@@ -1,4 +1,3 @@
-import React from 'react'
 import { Routes, Route } from 'react-router-dom';
 import 'swiper/css'
 import Header from './components/header/Header';

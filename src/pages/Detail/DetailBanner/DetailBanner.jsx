@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import Img from '../../../components/LazyLoad/Img';
 import api from '../../../utils/api';

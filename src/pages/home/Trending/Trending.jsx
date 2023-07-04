@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Carousel from '../../../components/Carousel/Carousel';
 import SwitchTab from '../../../components/Switchtab/Switchtab';
 import useGetTrending from '../../../Hooks/useGetTrending/useGetTrending';
 
 export default function Trending() {
   const [endPoint, setEndPoint] = useState('week');
-  const { data, isLoading} = useGetTrending(endPoint)
+  const { data, isLoading } = useGetTrending(endPoint);
   const onTabsChange = (data) => {
     setEndPoint(data);
   };

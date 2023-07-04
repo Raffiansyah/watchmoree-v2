@@ -1,5 +1,4 @@
-import { useQuery } from '@tanstack/react-query';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import api from '../../../utils/api';
 import { Link, useNavigate } from 'react-router-dom';
 import Img from '../../../components/LazyLoad/Img';
@@ -7,7 +6,7 @@ import useGetBanner from '../../../Hooks/useGetBanner/useGetBanner';
 
 export default function Banner() {
   const [query, setQuery] = useState('');
-  const { data, isLoading } = useGetBanner()
+  const { data, isLoading } = useGetBanner();
   const navigate = useNavigate();
 
   const background =

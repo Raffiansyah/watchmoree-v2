@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Footer() {
   return (
     <footer className="flex flex-col justify-center items-center bg-slate-800 text-white p-10">
@@ -21,7 +19,9 @@ export default function Footer() {
         Numquam dolorum earum nulla vero nesciunt aliquam. Modi obcaecati culpa,
         fuga nostrum explicabo ad officiis. Fugit, distinctio.
       </p>
-      <p className='text-xs md:text-base'>© 2023 WatchmoreeV2 | All rights reserved | MRA</p>
+      <p className="text-xs md:text-base">
+        © 2023 WatchmoreeV2 | All rights reserved | MRA
+      </p>
     </footer>
   );
 }

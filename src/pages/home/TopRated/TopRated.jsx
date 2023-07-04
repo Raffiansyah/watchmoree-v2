@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import SwitchTab from '../../../components/Switchtab/Switchtab';
 import Carousel from '../../../components/Carousel/Carousel';
 import useGetTopRated from '../../../Hooks/useGetTopRated/useGetTopRated';
 
 export default function TopRated() {
   const [endPoint, setEndPoint] = useState('tv');
-  const { data, isLoading } = useGetTopRated(endPoint)
+  const { data, isLoading } = useGetTopRated(endPoint);
   const onTabsChange = (data) => {
     setEndPoint(data);
   };
@@ -24,7 +24,11 @@ export default function TopRated() {
           onTabsChange={onTabsChange}
         />
       </div>
-      <Carousel datas={data?.results} isLoading={isLoading} endPoint={endPoint} />
+      <Carousel
+        datas={data?.results}
+        isLoading={isLoading}
+        endPoint={endPoint}
+      />
     </div>
   );
 }

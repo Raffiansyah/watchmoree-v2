@@ -1,4 +1,3 @@
-import React from 'react';
 import { useParams } from 'react-router-dom';
 import useGetSearch from '../../Hooks/useGetSearch/useGetSearch';
 import InfiniteScroll from 'react-infinite-scroll-component';
@@ -30,7 +29,7 @@ export default function SearchResult() {
           </InfiniteScroll>
         </>
       ) : (
-        <span className='text-white texr-xl'>Sorry, Results not found!</span>
+        <span className="text-white texr-xl">Sorry, Results not found!</span>
       )}
     </div>
   );

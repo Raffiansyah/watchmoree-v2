@@ -12,7 +12,7 @@ export default function Similar({ mediaType, id, title }) {
         </span>
       </div>
       {data?.results?.length > 0 ? (
-        <Carousel datas={data?.results} isLoading={isLoading} />
+        <Carousel datas={data?.results} isLoading={isLoading} endPoint={mediaType} />
       ) : (
         <div className='text-white opacity-50'>
           {`We dont have enough data to suggest any ${mediaType} based on ${title}`}
