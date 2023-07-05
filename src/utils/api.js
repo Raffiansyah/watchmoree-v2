@@ -77,6 +77,11 @@ const api = (() => {
     return request;
   }
 
+  async function getVideosMedia(mediaType, id) {
+    const request = await fetchWithAuth(`/${mediaType}/${id}/videos`);
+    return request
+  }
+
   return {
     getGenresMedia,
     getDiscoverMedia,
@@ -88,6 +93,7 @@ const api = (() => {
     getCreditsMedia,
     getRekomenMedia,
     getSimilarMedia,
+    getVideosMedia,
     ORIGINAL_IMG,
     W500_IMG,
   };

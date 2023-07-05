@@ -5,6 +5,8 @@ import Cast from './Cast/Cast';
 import Rekomendation from './Rekomendation/Rekomendation';
 import Similar from './Similar/Similar';
 import useGetDetail from '../../Hooks/useGetDetail/useGetDetail';
+import useGetVideos from '../../Hooks/useGetVideos/useGetVideos';
+import Videos from './Videos/Videos';
 
 export default function Detail() {
   const { mediaType, id } = useParams();
@@ -12,7 +14,11 @@ export default function Detail() {
     mediaType,
     id
   );
-  const { data: details, isLoading: detailtLoading } = useGetDetail(
+  const { data: details, isLoading: detailsLoading } = useGetDetail(
+    mediaType,
+    id
+  );
+  const { data: videos, isLoading: videosLoading } = useGetVideos(
     mediaType,
     id
   );
@@ -21,9 +27,10 @@ export default function Detail() {
       <DetailBanner
         credits={credits}
         details={details}
-        isLoading={detailtLoading}
+        isLoading={detailsLoading}
       />
       <Cast datas={credits?.cast} loading={creditsLoading} />
+      <Videos datas={videos} loading={videosLoading} />
       <Similar
         mediaType={mediaType}
         id={id}
